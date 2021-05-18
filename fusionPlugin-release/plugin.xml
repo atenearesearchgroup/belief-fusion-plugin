@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin
+        id="fusionPlugin"
+        name="My Plugin 2"
+        version="1.0"
+        provider-name="No Magic"
+        class="fusionPlugin.FusionPlugin">
+    <requires>
+        <api version="1.2"/>
+    </requires>
+
+    <runtime>
+        <library name="fusionPlugin.jar"/>
+    </runtime>
+</plugin>
