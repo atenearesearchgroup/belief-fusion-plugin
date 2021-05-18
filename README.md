@@ -6,7 +6,7 @@ beliefFusionPlugin is a MagicDraw plugin which allows the fusion of opinions in 
 
 ## Installing 
 
-As any other MagicDraw plugin, you only have to add the files in fusionPlugin-release in your local MagicDraw installation folder, in /MagicDraw/plugins, so that the files are in the following path:
+As any other MagicDraw plugin, you only have to add the files in release in your local MagicDraw installation folder, in /MagicDraw/plugins, so that the files are in the following path:
 
 - /MagicDraw/plugins/fusionPlugin/fusionPlugin.jar
 - /MagicDraw/plugins/fusionPlugin/plugin.xml
