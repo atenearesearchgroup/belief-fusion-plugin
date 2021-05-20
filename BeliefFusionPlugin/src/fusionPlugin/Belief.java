@@ -1,4 +1,4 @@
-package fusionPlugin;
+package myplugin2;
 
 import java.util.InputMismatchException;
 import java.util.regex.Matcher;
@@ -16,6 +16,13 @@ public class Belief {
 	private final String SBOOLEAN_REGEX = "SBoolean(\\s)*\\(((([0-9]+)(\\.[0-9]+)?)(\\s)*,(\\s)*){3}((([0-9]+)(\\.[0-9]+)?)){1}(\\s)*\\)";
 	private final String UBOOLEAN_REGEX = "UBoolean(\\s)*\\((\\s)*(true|false)(\\s)*,(\\s)*((([0-9]+)(\\.[0-9]+)?)){1}(\\s)*\\)";
 	private final String BOOLEAN_REGEX = "(true|false)";
+	private final String DEGREE_OF_CERTAINTY_CERTAIN = "CERTAIN"; 
+	private final String DEGREE_OF_CERTAINTY_PROBABLE = "PROBABLE";
+	private final String DEGREE_OF_CERTAINTY_POSSIBLE = "POSSIBLE";		 
+	private final String DEGREE_OF_CERTAINTY_UNCERTAIN = "UNCERTAIN";
+	private final String DEGREE_OF_CERTAINTY_IMPROBABLE = "IMPROBABLE";
+	private final String DEGREE_OF_CERTAINTY_UNLIKELY = "UNLIKELY";
+	private final String DEGREE_OF_CERTAINTY_IMPOSSIBLE = "IMPOSSBLE";
 	
 	private String agent;
 	private SBoolean opinion;
@@ -35,15 +42,35 @@ public class Belief {
 		Pattern booleanPattern = Pattern.compile(BOOLEAN_REGEX);
 		Matcher booleanMatcher = booleanPattern.matcher(opinion);
 		
-		if(sbooleanMatcher.matches()) {
-			return parseSBoolean(opinion);
+		SBoolean result;
+		System.out.println("Opinion" + opinion);
+		System.out.println(opinion.equals(DEGREE_OF_CERTAINTY_PROBABLE));
+		
+		if (opinion.toUpperCase().equals(DEGREE_OF_CERTAINTY_CERTAIN)) {
+			result =  new SBoolean(1, 0, 0, 1);
+		} else if (opinion.toUpperCase().equals(DEGREE_OF_CERTAINTY_PROBABLE)) {
+			result =  new SBoolean(0.67, 0, 0.33, 0.5);
+		} else if (opinion.toUpperCase().equals(DEGREE_OF_CERTAINTY_POSSIBLE)){
+			result =  new SBoolean(0.33, 0, 0.67, 0.5);
+		} else if (opinion.toUpperCase().equals(DEGREE_OF_CERTAINTY_UNCERTAIN)){
+			result =  new SBoolean(0, 0, 1, 0.5);
+		} else if (opinion.toUpperCase().equals(DEGREE_OF_CERTAINTY_IMPROBABLE)){
+			result =  new SBoolean(0, 0.33, 0.67, 0.5);
+		} else if (opinion.toUpperCase().equals(DEGREE_OF_CERTAINTY_UNLIKELY)){
+			result =  new SBoolean(0, 0.67, 0.33, 0.5);
+		} else if (opinion.toUpperCase().equals(DEGREE_OF_CERTAINTY_IMPOSSIBLE)){
+			result =  new SBoolean(0, 1, 0, 0);
+		} else if (sbooleanMatcher.matches()) {
+			result =  parseSBoolean(opinion);
 		} else if (ubooleanMatcher.matches()) {
-			return parseUBoolean(opinion);
+			result =  parseUBoolean(opinion);
 		} else if (booleanMatcher.matches()) {
-			return new SBoolean(Boolean.parseBoolean(opinion));
+			result =  new SBoolean(Boolean.parseBoolean(opinion));
 		} else {
 			throw new InputMismatchException("Input string " + opinion + " does not match a valid Belief value.");
 		}
+		System.out.println("Parsing result =" + result);
+		return result;
 	}
 	
 	private SBoolean parseSBoolean(String opinion) {

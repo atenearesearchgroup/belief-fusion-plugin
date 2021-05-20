@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2002 NoMagic, Inc. All Rights Reserved.
  */
-package fusionPlugin;
+package myplugin2;
 
 import com.jidesoft.chart.preference.LineWidthChooser;
 import com.nomagic.magicdraw.core.Application;
@@ -93,7 +93,6 @@ public class FuseOpinionsAction extends DefaultDiagramAction
 		Stereotype uncertainElementStereotype = getStereotype(project, profileName, stereotypeName);
 		List<Element> stereotypedElements = getStereotypedElements(project, uncertainElementStereotype);
 		
-		Application.getInstance().getGUILog().showMessage("Fusion process completed.");
 		System.out.println("---------------------");
 		
 		for(Element e : stereotypedElements) {
@@ -144,9 +143,12 @@ public class FuseOpinionsAction extends DefaultDiagramAction
 				windowMessage += composeMessage(e, "Opinions must be from different agents to perform the fusion process.");
 			}
 		}
+		
 		if(!windowMessage.isEmpty()) {
 			Application.getInstance().getGUILog().showMessage(windowMessage);
 		}
+		
+		Application.getInstance().getGUILog().showMessage("Fusion process completed.");
 	}
 	
 	private boolean differentAgents(List<Belief> beliefs) {
@@ -236,17 +238,20 @@ public class FuseOpinionsAction extends DefaultDiagramAction
 					} else {
 						System.out.println("Unexpected value");
 					}
+					
+					
+					if(agent != null && subjectiveOpinion != null) {
+						try {
+							Belief b = new Belief(agent, subjectiveOpinion);
+							results.add(b);
+						} catch (InputMismatchException error) {
+							windowMessage += "[ERROR] " + error.getMessage() + "\n";
+						}
+					}
 				}
 				
 			}
-			if(agent != null && subjectiveOpinion != null) {
-				try {
-					Belief b = new Belief(agent, subjectiveOpinion);
-					results.add(b);
-				} catch (InputMismatchException error) {
-					windowMessage += "[ERROR] " + error.getMessage() + "\n";
-				}
-			}
+			
 		}
 		return results;		
 	}
