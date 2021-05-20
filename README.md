@@ -11,7 +11,7 @@ beliefFusionPlugin is a MagicDraw plugin which allows the fusion of opinions in 
 ### Requirements
 
 - MagicDraw 19.0
-- Java compiler 1.8 (JDK must be version 1.8 too - MagicDraw 19.0 does not support a higher version)
+- Java >= 1.8
 
 
 ### Installing 
@@ -64,8 +64,8 @@ Depending on the fusion operator, the projection of the opinion will have a diff
 
 ### Requirements
 
-- Java = 1.8
-- MagicDraw >= 19.0
+- MagicDraw 19.0
+- Java compiler 1.8 (JDK must be version 1.8 too - MagicDraw 19.0 does not support a higher version)
 - Eclipse IDE for Eclipse Committers >= 2021-03
 
 ### Configure Eclipse for development
