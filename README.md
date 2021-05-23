@@ -78,6 +78,6 @@ Before starting this tutorial, make sure to have installed the software mentione
 
 2. Following the tutorial available in the following URL, import the sample projects from the MagicDraw intallation folder.
 
-https://docs.nomagic.com/display/MD182/Development+in+Eclipse
+https://docs.nomagic.com/display/MD190SP4/Development+in+Eclipse
 
 ## Citations
