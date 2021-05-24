@@ -6,6 +6,16 @@ Belief Fusion Plugin
 
 beliefFusionPlugin is a MagicDraw plugin which allows the fusion of opinions in UML diagrams, using Subjective Logic and a UML Profile defined for this purpose.
 
+## Sections
+
+- [User guide](https://github.com/atenearesearchgroup/beliefFusionPlugin#user-guide)
+    -  [Requirements](https://github.com/atenearesearchgroup/beliefFusionPlugin#requirements)
+    -  [Installing](https://github.com/atenearesearchgroup/beliefFusionPlugin#installing)
+    -  [Usage](https://github.com/atenearesearchgroup/beliefFusionPlugin#usage)
+-  [Developer guide]
+    - [Requirements](https://github.com/atenearesearchgroup/beliefFusionPlugin#requirements-1)  
+    - [Configure Eclipse for development](https://github.com/atenearesearchgroup/beliefFusionPlugin#configure-eclipse-for-development)
+
 ## User guide
 
 ### Requirements
