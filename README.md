@@ -31,14 +31,14 @@ beliefFusionPlugin is a MagicDraw plugin which allows the fusion of opinions in 
 
 ### Usage
 
-1. Import the example project with our profile from the following link. _=> Link not available yet, to be released soon._
+1. Import the example project with our profile from the following link. _Link not available yet, to be released soon._
 2. Once the project is loaded, create the classes needed for your project and instanciate them in an **Object Diagram**. 
 
-In this tutorial, we will be using the example of two friends, Ada and Bob, who are deciding which film they think won an Oscar, so that they can make a guess in a group competition.
+    In this tutorial, we are using the example of two friends, Ada and Bob, who are trying to agree on which film won an Oscar to make a guess in a group competition.
 
 <div align="center"><img src="https://user-images.githubusercontent.com/26405870/118788630-422f5180-b894-11eb-8acb-aaf37e28d552.png"/></div>
 
-4. Now we will assign the **Agent** stereotype to those instances which will have an opinion, in this case, Ada and Bob, instances of **FilmFan**. Additionally, we will assign the stereotype **UncertainElementFusion** to the films, so that the fans can assign their beliefs, and fuse them afterwards.
+4. Now, we will assign the **Agent** stereotype to those instances which will comment on the films, in this case, Ada and Bob, instances of **FilmFan**. Additionally, we will assign the stereotype **UncertainElementFusion** to the films so that the fans can assign their beliefs and fuse them afterward.
 
 <div align="center"><img src="https://user-images.githubusercontent.com/26405870/118797220-a3f3b980-b89c-11eb-8e00-9bd9d164a0d0.png"/></div>
 
@@ -48,13 +48,13 @@ In this tutorial, we will be using the example of two friends, Ada and Bob, who 
 
 6. Then, we assign the beliefs as tag values for each of the films.
 
-Ada is pretty sure that the film which won an Oscar was Parasite, so she assigns the most confident opinion to it. In contrast, she decides to discard the other two films, since she is sure they did not win, so she assigns a high level of disbelief. 
+    Ada is pretty sure that the film that won an Oscar was Parasite, so she assigns the most confident opinion. In contrast, she decides to discard the other two films since she is pretty sure they did not win, so she assigns a high level of disbelief. 
 
-Bob loves super hero films and he thinks Joker won the Oscar, although he is no entirely sure. Bob is also not into other type of films, so he does not know what to say about the others, assigning a vacuous opinion to them.
+    Bob loves superhero films, and he thinks Joker won the Oscar, although he is not entirely sure. Bob is also not into other types of films, so he does not know what to say about the others, assigning a vacuous opinion to them.
 
 <div align="center"><img src="https://user-images.githubusercontent.com/26405870/118797921-5a579e80-b89d-11eb-93da-e21817ead0a2.png"/></div>
 
-7. Finally, we will click the fusion plugin button, and the opinions will be fused.
+7. Finally, we click the fusion plugin button, and the opinions will be fused.
 
 <div align="center"><img src="https://user-images.githubusercontent.com/26405870/118798233-b6222780-b89d-11eb-947a-aa89916be134.png"/></div>
 
@@ -78,6 +78,6 @@ Before starting this tutorial, make sure to have installed the software mentione
 
 2. Following the tutorial available in the following URL, import the sample projects from the MagicDraw intallation folder.
 
-https://docs.nomagic.com/display/MD190SP4/Development+in+Eclipse
+    https://docs.nomagic.com/display/MD190SP4/Development+in+Eclipse
 
 ## Citations
