@@ -93,7 +93,7 @@ Before starting this tutorial, make sure to have installed the software mentione
 
     <div align="center"><img src="https://user-images.githubusercontent.com/26405870/119345074-b86af400-bc98-11eb-90e3-718d3a273f6f.png"/></div>
     
-4. Add the **BeliefFusionPlugin** project to the **MagicDraw with all plugins Build Path**, selecting on the _Project Properties > Java Build Path > Projects > Add_. (_Right-click on the project to access to the Properties option_)
+4. Add the **BeliefFusionPlugin** project to the **MagicDraw with all plugins Build Path**, selecting on the _Project Properties > Java Build Path > Projects > Add_. _(Right-click on the project to access to the Properties option)_
 
 <div align="center"><img src="https://user-images.githubusercontent.com/26405870/119345374-14357d00-bc99-11eb-9bf6-8ebcbf9cf264.png" width="80%"/></div>
 
@@ -102,7 +102,7 @@ Before starting this tutorial, make sure to have installed the software mentione
 ```
     -Dmd.plugins.dir=&quot;${resource_loc:MagicDraw/MAGIC_DRAW_INSTALL_DIRECTORY}/plugins;${workspace_loc};${workspace_loc}/beliefFusionPlugin/plugin;"
 ```
-6. Right-click on the file **MagicDraw with all plugins.launch**, select _Run As.. > MagicDraw with all plugins_ and a new instance of MagicDraw should open. If this icon is available, it means that the deployment was completed successfully.
+6. Right-click on the file **MagicDraw with all plugins.launch**, select _Run As... > MagicDraw with all plugins_ and a new instance of MagicDraw should open. If this icon is available, it means that the deployment was completed successfully.
 
 <div align="center"><img src="https://user-images.githubusercontent.com/26405870/118785217-f038fc80-b890-11eb-870d-452a527cafcb.png" width="80%"/></div>
 
