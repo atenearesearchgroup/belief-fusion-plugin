@@ -1,4 +1,4 @@
-package myplugin2;
+package fusionPlugin;
 
 import java.util.InputMismatchException;
 import java.util.regex.Matcher;

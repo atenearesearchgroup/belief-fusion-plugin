@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2002 NoMagic, Inc. All Rights Reserved.
  */
-package myplugin2;
+package fusionPlugin;
 
 import com.jidesoft.chart.preference.LineWidthChooser;
 import com.nomagic.magicdraw.core.Application;
@@ -220,11 +220,12 @@ public class FuseOpinionsAction extends DefaultDiagramAction
 		System.out.println("Stereotyped element: " + e.getHumanName());
 		// To get the tag value
 		List<InstanceSpecification> tagValues = StereotypesHelper.getStereotypePropertyValue(e, "UncertainElement", "beliefs");
+		// Each belief contains an agent AND a SBoolean value
 		for(InstanceSpecification tagValue : tagValues) {
 			TreeIterator<EObject> beliefs = tagValue.eAllContents();
 			LiteralString subjectiveOpinion = null;
 			String agent = null;
-			// Each belief contains an agent and a SBoolean value
+			// Each belief contains an agent OR a SBoolean value
 			while(beliefs.hasNext()) {
 				EObject belief = beliefs.next();
 				List<EObject> fin = belief.eContents();
@@ -237,19 +238,17 @@ public class FuseOpinionsAction extends DefaultDiagramAction
 						System.out.println("Agent: " + agent);
 					} else {
 						System.out.println("Unexpected value");
-					}
-					
-					
-					if(agent != null && subjectiveOpinion != null) {
-						try {
-							Belief b = new Belief(agent, subjectiveOpinion);
-							results.add(b);
-						} catch (InputMismatchException error) {
-							windowMessage += "[ERROR] " + error.getMessage() + "\n";
-						}
-					}
+					}					
 				}
 				
+			}
+			if(agent != null && subjectiveOpinion != null) {
+				try {
+					Belief b = new Belief(agent, subjectiveOpinion);
+					results.add(b);
+				} catch (InputMismatchException error) {
+					windowMessage += "[ERROR] " + error.getMessage() + "\n";
+				}
 			}
 			
 		}
