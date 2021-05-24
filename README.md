@@ -60,6 +60,11 @@ beliefFusionPlugin is a MagicDraw plugin which allows the fusion of opinions in 
 
 Depending on the fusion operator, the projection of the opinion will have a different value. However, the highest ones are mostly in the Parasite film, which is also the correct answer.
 
+Optionally, you can show the tag values in a note so that your diagram looks more organized.
+
+<div align="center"><img src="https://user-images.githubusercontent.com/26405870/119328157-1a6d2e80-bc84-11eb-8051-13667dc3cfd8.png"/></div>
+
+
 ## Developer guide
 
 ### Requirements
