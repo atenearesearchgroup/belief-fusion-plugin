@@ -81,8 +81,31 @@ Before starting this tutorial, make sure to have installed the software mentione
 
 <div align="center"><img src="https://user-images.githubusercontent.com/26405870/118799434-0483f600-b89f-11eb-8481-dcd6e8ee32f3.png"/></div>
 
+   Make sure that the Directory in which you clone the plugin is your current workspace.
+   
+   <div align="center"><img src="https://user-images.githubusercontent.com/26405870/119344581-2105a100-bc98-11eb-9516-c69a0ded9318.png"/></div>
+   
 2. Following the tutorial available in the following URL, import the sample projects from the MagicDraw intallation folder.
 
     https://docs.nomagic.com/display/MD190SP4/Development+in+Eclipse
+    
+3. Aftet the previous steps, your workspace should look like this:
+
+    <div align="center"><img src="https://user-images.githubusercontent.com/26405870/119345074-b86af400-bc98-11eb-90e3-718d3a273f6f.png"/></div>
+    
+4. Add the **BeliefFusionPlugin** project to the **MagicDraw with all plugins Build Path**, selecting on the _Project Properties > Java Build Path > Projects > Add_. (_Right-click on the project to access to the Properties option_)
+
+<div align="center"><img src="https://user-images.githubusercontent.com/26405870/119345374-14357d00-bc99-11eb-9bf6-8ebcbf9cf264.png"/></div>
+
+5. Modify the file **MagicDraw with all plugins.launch** inside MagicDraw with all plugins project, so that the stringAttribute named **org.eclipse.jdt.launching.VM_ARGUMENTS**, contains an attribute named  **-Dmd.plugins.dir** with the following content:
+
+```
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-XX:+IgnoreUnrecognizedVMOptions&#10;-Xdock:name=MagicDraw -Xdock:icon=${workspace_loc:/MagicDraw-
+    ...
+    Dmd.plugins.dir=&quot;${resource_loc:MagicDraw/MAGIC_DRAW_INSTALL_DIRECTORY}/plugins;${workspace_loc};${workspace_loc}/beliefFusionPlugin/plugin;"/>
+```
+6. Right-click on the file **MagicDraw with all plugins.launch**, select _Run As.. > MagicDraw with all plugins_ and a new instance of MagicDraw should open. If this icon is available, it means that the deployment was completed successfully.
+
+<div align="center"><img src="https://user-images.githubusercontent.com/26405870/118785217-f038fc80-b890-11eb-870d-452a527cafcb.png"/></div>
 
 ## Citations
