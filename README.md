@@ -12,7 +12,7 @@ beliefFusionPlugin is a MagicDraw plugin which allows the fusion of opinions in 
     -  [Requirements](https://github.com/atenearesearchgroup/beliefFusionPlugin#requirements)
     -  [Installing](https://github.com/atenearesearchgroup/beliefFusionPlugin#installing)
     -  [Usage](https://github.com/atenearesearchgroup/beliefFusionPlugin#usage)
--  [Developer guide]
+-  [Developer guide](https://github.com/atenearesearchgroup/beliefFusionPlugin#developer-guide)
     - [Requirements](https://github.com/atenearesearchgroup/beliefFusionPlugin#requirements-1)  
     - [Configure Eclipse for development](https://github.com/atenearesearchgroup/beliefFusionPlugin#configure-eclipse-for-development)
 
