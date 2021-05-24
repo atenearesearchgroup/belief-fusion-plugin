@@ -4,17 +4,7 @@ Belief Fusion Plugin
 
 ## About
 
-beliefFusionPlugin is a MagicDraw plugin which allows the fusion of opinions in UML diagrams, using Subjective Logic and a UML Profile defined for this purpose.
-
-## Sections
-
-- [User guide](https://github.com/atenearesearchgroup/beliefFusionPlugin#user-guide)
-    -  [Requirements](https://github.com/atenearesearchgroup/beliefFusionPlugin#requirements)
-    -  [Installing](https://github.com/atenearesearchgroup/beliefFusionPlugin#installing)
-    -  [Usage](https://github.com/atenearesearchgroup/beliefFusionPlugin#usage)
--  [Developer guide](https://github.com/atenearesearchgroup/beliefFusionPlugin#developer-guide)
-    - [Requirements](https://github.com/atenearesearchgroup/beliefFusionPlugin#requirements-1)  
-    - [Configure Eclipse for development](https://github.com/atenearesearchgroup/beliefFusionPlugin#configure-eclipse-for-development)
+beliefFusionPlugin is a MagicDraw plugin that enables the the fusion the opinions added to UML diagrams using our UML Belief Profile.
 
 ## User guide
 
@@ -26,13 +16,13 @@ beliefFusionPlugin is a MagicDraw plugin which allows the fusion of opinions in 
 
 ### Installing 
 
-1. To install any MagicDraw plugin, you only have to add the corresponding compiled files in the folder **plugins** in your **local MagicDraw installation folder**, i.e. in /MagicDraw/plugins. In our case, you only have to add the three files available in the repository folder named **release**, so that they are in the following paths:
+1. To install our plugin, as any MagicDraw plugin, the compiled files needs to be added to the **plugins** folder of your **local MagicDraw installation folder**, i.e. in <path to your MagicDraw installation folder>/MagicDraw/plugins/. You will find our compiled files in our latest release (v1.0) and under the folder named **release**. After placing them in the plugins folder, the folder structure should be:
 
     - /MagicDraw/plugins/fusionPlugin/fusionPlugin.jar
     - /MagicDraw/plugins/fusionPlugin/plugin.xml
     - /MagicDraw/plugins/fusionPlugin/logoFusion.png
 
-2. Open MagicDraw and select a project with at least one **Object Diagram**. _If it is not an Object Diagram, the icon won't be visible._
+2. Open MagicDraw and select a project with at least one **Object Diagram**. _Note that for other types of diagrams the icon won't be visible._
 3. Open the Object Diagram and you should be able to see the following icon in the toolbar:
 
 <div align="center"><img src="https://user-images.githubusercontent.com/26405870/118785217-f038fc80-b890-11eb-870d-452a527cafcb.png" width="80%"/></div>
