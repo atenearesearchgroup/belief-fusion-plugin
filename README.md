@@ -89,7 +89,7 @@ Before starting this tutorial, make sure to have installed the software mentione
 
     https://docs.nomagic.com/display/MD190SP4/Development+in+Eclipse
     
-3. Aftet the previous steps, your workspace should look like this:
+3. After the previous steps, your workspace should look like this:
 
     <div align="center"><img src="https://user-images.githubusercontent.com/26405870/119345074-b86af400-bc98-11eb-90e3-718d3a273f6f.png"/></div>
     

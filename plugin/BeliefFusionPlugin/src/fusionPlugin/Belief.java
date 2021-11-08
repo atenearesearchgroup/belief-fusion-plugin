@@ -1,4 +1,4 @@
-package fusionPlugin;
+package myplugin2;
 
 import java.util.InputMismatchException;
 import java.util.regex.Matcher;
@@ -22,14 +22,14 @@ public class Belief {
 	private final String DEGREE_OF_CERTAINTY_UNCERTAIN = "UNCERTAIN";
 	private final String DEGREE_OF_CERTAINTY_IMPROBABLE = "IMPROBABLE";
 	private final String DEGREE_OF_CERTAINTY_UNLIKELY = "UNLIKELY";
-	private final String DEGREE_OF_CERTAINTY_IMPOSSIBLE = "IMPOSSBLE";
+	private final String DEGREE_OF_CERTAINTY_IMPOSSIBLE = "IMPOSSIBLE";
 	
 	private String agent;
 	private SBoolean opinion;
 	
 	public Belief(String agent, LiteralString opinion) {
 		this.agent = agent;
-		this.opinion = parseValue(opinion.getValue().toString());
+		this.opinion = parseValue(opinion.getValue().toString().toUpperCase());
 	}
 	
 	private SBoolean parseValue(String opinion) throws InputMismatchException {
@@ -47,7 +47,7 @@ public class Belief {
 		System.out.println(opinion.equals(DEGREE_OF_CERTAINTY_PROBABLE));
 		
 		if (opinion.toUpperCase().equals(DEGREE_OF_CERTAINTY_CERTAIN)) {
-			result =  new SBoolean(1, 0, 0, 1);
+			result =  new SBoolean(1, 0, 0, 0.5);
 		} else if (opinion.toUpperCase().equals(DEGREE_OF_CERTAINTY_PROBABLE)) {
 			result =  new SBoolean(0.67, 0, 0.33, 0.5);
 		} else if (opinion.toUpperCase().equals(DEGREE_OF_CERTAINTY_POSSIBLE)){
@@ -59,7 +59,7 @@ public class Belief {
 		} else if (opinion.toUpperCase().equals(DEGREE_OF_CERTAINTY_UNLIKELY)){
 			result =  new SBoolean(0, 0.67, 0.33, 0.5);
 		} else if (opinion.toUpperCase().equals(DEGREE_OF_CERTAINTY_IMPOSSIBLE)){
-			result =  new SBoolean(0, 1, 0, 0);
+			result =  new SBoolean(0, 1, 0, 0.5);
 		} else if (sbooleanMatcher.matches()) {
 			result =  parseSBoolean(opinion);
 		} else if (ubooleanMatcher.matches()) {
